@@ -1,0 +1,44 @@
+ROS는 Robot Operating System의 약자이다. 로봇 운영 체제이다.
+
+하드웨어 추상화 : 같은 종류의 하드웨어를 공통 명령어 집합으로 묶어 두는 것을 추상화라 한다.
+ex)초음파 센서의 A회사, B회사, C회사 회사마다 인터페이스가 다르다. 같은 종류의 하드웨어를 공통된 집합으로 묶어 두는 것
+   장점 : 빠르게 제어할 수 있다. 
+
+현재 우리가 사용하는 ROS 로봇 운영체저는 ROS Melodic Morenia May 23rd, 2018, 5V에서 돌아간다.
+ROS는 반드시 리눅스, 윈도우의 기반으로 운영된다. 
+
+http://wiki.ros.org (ROS의 공식 홈페이지) // 가능하면 영어로 봐줘!!
+
+
+
+//ROS(Robot Operating System) - 중요 개념
+- Nodes                    : 최소단위  //Node를 실행하기 위해서는 Services나, Actions을 사용한다. 쉽지 않기 때문에 나중에~~
+- Messages and Topics : 노들 사이에 주고 받는 정보
+- Services 
+- Actions
+- ROS Master
+- Parameters
+- Packages and Stacks
+
+로스는기본적으로 losmaster에서 관장하게 된다. roscore을 실행하면 ROSmaster을 사용할 수 있다. ROS Parameter Server, rosout
+
+-최소 실행 단위 프로그램 - eg.senor driver(s), actuator driver(s), map building, planner, UI, etc.
+- 최소 실행 단위이기 때문에 독립적으로 컴파일, 실행, 관리된다. 
+자율주행에서 map을 만드는 map building
+
+
+- Node는 Topic을 사용하여 Publish(메세지를 보내는 것) 또는 Subscriber(메세지는 받는것)
+- ROSmaster에서 Topics들을 주고 받는다.
+- Bags 메세지들을 다 저장해서 로딩할 수 있다.
+
+-Service - 양방향 통신, 동기 통신 이다. <----> Topic
+  1-to-1 request-response 클라이언트 요청이 있을 때만 서버에서 응답, 요청과 응답이 끊어지면 노드 접속이 끊어진다.
+  우리는 Topic을 주로하고 Actions과 Sevices는 나중에 중급과정에서~~
+
+
+ROS(Robot Operating system)의 진정한 목적은
+로보틱스 소프트웨어 개발을 전세계 레벨에서 공동작업 가능하도록 환경을 구축하는 것!!
+
+자율주행자동차 공장 자동화 //많은 부분에서 사용
+
+
